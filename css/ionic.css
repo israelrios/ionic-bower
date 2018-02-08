@@ -9590,14 +9590,16 @@ a.button {
   height: calc(constant(safe-area-inset-top) + 44px);
   height: calc(env(safe-area-inset-top) + 44px); }
   .platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader).item-input-inset .item-input-wrapper {
-    margin-top: 19px !important; }
+    margin-top: 19px !important;
+    margin-top: constant(safe-area-inset-top) !important;
+    margin-top: env(safe-area-inset-top) !important; }
   .platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader) > * {
     margin-top: 20px;
     margin-top: constant(safe-area-inset-top);
     margin-top: env(safe-area-inset-top); }
 
 .platform-ios.platform-cordova:not(.fullscreen) .bar-header {
-  padding-left: calc( constant(safe-area-inset-left) + 5px);
+  padding-left: calc(constant(safe-area-inset-left) + 5px);
   padding-left: calc(env(safe-area-inset-left) + 5px);
   padding-right: calc(constant(safe-area-inset-right) + 5px);
   padding-right: calc(env(safe-area-inset-right) + 5px); }
@@ -9610,9 +9612,11 @@ a.button {
   bottom: calc(env(safe-area-inset-bottom) + 49px); }
 
 .platform-ios.platform-cordova:not(.fullscreen) .tabs-top > .tabs, .platform-ios.platform-cordova:not(.fullscreen) .tabs.tabs-top {
-  top: 64px; }
+  top: 64px;
+  top: calc(constant(safe-area-inset-top) + 44px);
+  top: calc(env(safe-area-inset-top) + 44px); }
 
-.platform-ios.platform-cordova:not(.fullscreen) .tabs {
+.platform-ios.platform-cordova:not(.fullscreen) .tabs-bottom > .tabs, .platform-ios.platform-cordova:not(.fullscreen) .tabs.tabs-bottom {
   padding-bottom: constant(safe-area-inset-bottom);
   padding-bottom: env(safe-area-inset-bottom);
   height: calc(constant(safe-area-inset-bottom) + 49px);
